@@ -1802,7 +1802,7 @@ sub gravatar_url {
 	my $email = lc shift;
 	my $size = shift;
 	$avatar_cache{$email} ||=
-		"http://www.gravatar.com/avatar/" .
+		"https://secure.gravatar.com/avatar/" .
 			Digest::MD5::md5_hex($email) . "?s=";
 	return $avatar_cache{$email} . $size;
 }
